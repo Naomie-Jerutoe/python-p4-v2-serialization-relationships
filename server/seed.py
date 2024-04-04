@@ -29,14 +29,14 @@ with app.app_context():
 
     for n in range(25):
         e = Enclosure(environment=rc(environments),
-                      open_to_visitors=rc([True, False]))
+                    open_to_visitors=rc([True, False]))
         enclosures.append(e)
 
     db.session.add_all(enclosures)
 
     animals = []
     species = ['Lion', 'Tiger', 'Bear', 'Hippo', 'Rhino', 'Elephant', 'Ostrich',
-               'Snake', 'Monkey']
+            'Snake', 'Monkey']
 
     for n in range(200):
         name = fake.first_name()
